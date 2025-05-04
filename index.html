@@ -21,9 +21,21 @@
                 <label for="search" class="offscreen">Enter A Search Term or a phrase</label>
                 <input type="text" id="search" autocomplete="off">
                 <div id="clear" class="none button clear" tabindex="0" role="button" aria-label="clear search term" > x </div>
-                <button></button>
+                <button id="searchButton" class="button searchButton" type="submit" aria-label="submit button">Search</button>
             </form>
         </section>
+        <section class="results">
+            <h2 class="offscreen">Search Results</h2>
+            <div class="statusBar">
+                <div class="stats" id="stats" aria-live="assertive"></div>
+            </div>
+            <div class="searchResults" id="searchResults">
+
+            </div>
+        </section>
     </main>
+    <footer>
+        <p><span aria-hidden="true">&lt;&lt;</span>Powered by <a href="https://wikipedia.org" target="_blank">wikipedia</a><span aria-hidden="true">&gt;&gt;</span></p>
+    </footer>
 </body>
 </html>
