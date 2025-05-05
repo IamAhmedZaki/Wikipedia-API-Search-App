@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SearchMe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>SearchMe</title>
 </head>
 <body>
     <main>
@@ -20,8 +24,12 @@
             <form id="searchBar" class="searchBar" action="">
                 <label for="search" class="offscreen">Enter A Search Term or a phrase</label>
                 <input type="text" id="search" autocomplete="off">
-                <div id="clear" class="none button clear" tabindex="0" role="button" aria-label="clear search term" > x </div>
-                <button id="searchButton" class="button searchButton" type="submit" aria-label="submit button">Search</button>
+                <div id="clear" class="none button clear" tabindex="0" role="button" aria-label="clear search term" >
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <button id="searchButton" class="button searchButton" type="submit" aria-label="submit button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
         </section>
         <section class="results">
@@ -30,7 +38,16 @@
                 <div class="stats" id="stats" aria-live="assertive"></div>
             </div>
             <div class="searchResults" id="searchResults">
+                <div class="resultContents">
+                    <div class="resultImage">
+                        <img src="" alt="">
+                    </div>
+                    <div class="resultText">
+                        <p class="resultDescription">
 
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
