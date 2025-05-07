@@ -1,4 +1,4 @@
-footer, main {
+.searchEntry, footer, main {
   display: flex;
   align-items: center;
 }
@@ -44,4 +44,74 @@ footer p a {
 
 img {
   display: block;
+}
+
+.blue {
+  color: #4885ed;
+}
+
+.red {
+  color: #db3236;
+}
+
+.yellow {
+  color: #ffc107;
+}
+
+.green {
+  color: #3cba54;
+}
+
+.exclaim {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform: rotate(12deg);
+}
+@media only screen and (min-width: 768px) {
+  .exclaim {
+    font-size: 5rem;
+  }
+}
+
+.offscreen {
+  position: absolute;
+  left: -1000px;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.searchEntry {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+.searchEntry .logo {
+  letter-spacing: -5px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .searchEntry .logo {
+    letter-spacing: -10px;
+    font-size: 4rem;
+  }
+}
+.searchEntry .searchBar {
+  width: 90vw;
+  display: flex;
+  border: 2px #e6e6e6 solid;
+  border-radius: 500px;
+  padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+}
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar {
+    width: 80vw;
+    padding: 1.25rem 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
