@@ -1,7 +1,19 @@
 document.addEventListener('readystatechange',(event)=>{
     if (event.target.readyState === 'complete') {
-        console.log(event);
-        console.log(event.target);
+        initApp();
         
     }
-})
+});
+
+const initApp=()=>{
+        //set the focus 
+        // 3 listeners for clear
+
+
+    const form=document.getElementById('searchBar')
+    form.addEventListener('click',submitTheSearch)
+}
+
+const submitTheSearch=(event)=>{
+    event.preventDefault();
+}
