@@ -1,3 +1,7 @@
+import {setSearchFocus} from "./searchBar.js";
+import {getSearchTerm, retrieveSearchResults} from "./dataFunctions.js";
+
+
 document.addEventListener('readystatechange',(event)=>{
     if (event.target.readyState === 'complete') {
         initApp();
@@ -8,7 +12,7 @@ document.addEventListener('readystatechange',(event)=>{
 const initApp=()=>{
         //set the focus 
         // 3 listeners for clear
-
+        setSearchFocus();
 
     const form=document.getElementById('searchBar')
     form.addEventListener('click',submitTheSearch)
@@ -16,4 +20,12 @@ const initApp=()=>{
 
 const submitTheSearch=(event)=>{
     event.preventDefault();
+    processTheSearch();
+    setSearchFocus();
+};
+
+
+const processTheSearch=async () => {
+    const searchTerm= getSearchTerm();
+    const resultArray=await retrieveSearchResults(searchTerm);
 }
