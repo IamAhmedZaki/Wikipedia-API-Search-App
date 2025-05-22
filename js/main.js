@@ -27,5 +27,7 @@ const submitTheSearch=(event)=>{
 
 const processTheSearch=async () => {
     const searchTerm= getSearchTerm();
+    if (searchTerm==='') return;
     const resultArray=await retrieveSearchResults(searchTerm);
-}
+};
+
