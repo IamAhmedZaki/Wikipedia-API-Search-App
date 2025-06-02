@@ -8,7 +8,7 @@ export const getSearchTerm=()=>{
 // `https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=daschund&gsrlimit=20&prop=pageimages|extracts&exchars=130&exintro&explaintext&exlimit=max&format=json&origin=*`;
 
 export const retrieveSearchResults=async(searchTerm)=>{
-    const wikiSearchString=getWikiSearchString(searchTerm);
+    const wikiSearchString= await getWikiSearchString(searchTerm);
     const wikiSearchResults=await requestData(wikiSearchString);
     let resultArray=[]
     if (wikiSearchResults.hasOwnProperty('query')){
@@ -44,7 +44,7 @@ const requestData=async(searchString)=>{
 }
 
 const processWikiResults=(results)=>{
-    let resultArray;
+    let resultArray=[];
     Object.keys(results).forEach((key)=>{
         const id=key
         const title=results[key].title

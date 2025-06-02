@@ -11,7 +11,7 @@ export const buildSearchResults=(resultArray)=>{
     resultArray.forEach(result => {
         const resultItem=createResultItem(result)
         const resultContent=document.createElement('div')
-        resultItem.classList('resultContent')
+        resultItem.classList.add('resultContent')
         if(result.img){
             const resultImage=createResultImage()
             resultContent.append(resultImage)
@@ -54,7 +54,7 @@ const createResultText=(result)=>{
     const resultText=document.createElement('div')
     resultText.classList.add('resultText')
     const resultDescription=document.createElement('p')
-    resultDescription.classList('resultDescription')
+    resultDescription.classList.add('resultDescription')
     resultDescription.textContent=result.title
     resultText.append(resultDescription)
     return resultText
