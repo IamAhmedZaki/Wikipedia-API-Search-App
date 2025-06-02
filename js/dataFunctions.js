@@ -1,5 +1,5 @@
 export const getSearchTerm=()=>{
-    const rawSearchTerm=document.querySelector('.search').value.trim();
+    const rawSearchTerm=document.getElementById('search').value.trim();
     const regex=/[]{2,}/gi;
     const searchTerm=rawSearchTerm.replaceAll(regex," ");
     return searchTerm;
@@ -63,3 +63,4 @@ const processWikiResults=(results)=>{
     return resultArray;
 
 }
+

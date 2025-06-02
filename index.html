@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>SearchMe</title>
     <link rel="stylesheet" href="dist/css/style.css" class="stule">
-    <script src="/js/main.js"></script>
+    
 </head>
 <body>
     <main>
@@ -34,7 +34,7 @@
             <form id="searchBar" class="searchBar" action="">
                 <label for="search" class="offscreen">Enter A Search Term or a phrase</label>
                 <input type="text" id="search" autocomplete="off">
-                <div id="clear" class=" button clear" tabindex="0" role="button" aria-label="clear search term" >
+                <div id="clear" class=" none button clear" tabindex="0" role="button" aria-label="clear search term" >
                     <i class="fa-solid fa-x"></i>
                 </div>
                 <button id="searchButton" class="button searchButton" type="submit" aria-label="submit button">
@@ -64,5 +64,7 @@
     <footer>
         <p><span aria-hidden="true">&lt;&lt;</span>Powered by <a href="https://wikipedia.org" target="_blank">wikipedia</a><span aria-hidden="true">&gt;&gt;</span></p>
     </footer>
+
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
