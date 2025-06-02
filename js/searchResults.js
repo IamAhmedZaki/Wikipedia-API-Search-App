@@ -11,9 +11,10 @@ export const buildSearchResults=(resultArray)=>{
     resultArray.forEach(result => {
         const resultItem=createResultItem(result)
         const resultContent=document.createElement('div')
-        resultItem.classList.add('resultContent')
+        resultContent.classList.add('resultContent')
         if(result.img){
-            const resultImage=createResultImage()
+            const resultImage=createResultImage(result)
+
             resultContent.append(resultImage)
         } 
         const resultText=createResultText(result)
@@ -32,7 +33,7 @@ const createResultItem=(result)=>{
     resultTitle.classList.add('resultTitle')
     const link=document.createElement('a')
     link.href=`https://en.wikipedia.org/?curid=${result.id}`
-    link.textContent=result.item
+    link.textContent=result.title
     link.target='_blank'
     resultTitle.append(link)
     resultItem.append(resultTitle)
@@ -41,9 +42,11 @@ const createResultItem=(result)=>{
 
 
 const createResultImage=(result)=>{
+    console.log(result);
     const resultImage=document.createElement('div')
     resultImage.classList.add('resultImage')
     const img=document.createElement('img')
+    
     img.src=result.img
     img.alt=result.title
     resultImage.append(img)
@@ -55,7 +58,7 @@ const createResultText=(result)=>{
     resultText.classList.add('resultText')
     const resultDescription=document.createElement('p')
     resultDescription.classList.add('resultDescription')
-    resultDescription.textContent=result.title
+    resultDescription.textContent=result.text
     resultText.append(resultDescription)
     return resultText
 }

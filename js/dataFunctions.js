@@ -48,13 +48,13 @@ const processWikiResults=(results)=>{
     Object.keys(results).forEach((key)=>{
         const id=key
         const title=results[key].title
-        const text=results[key].text
+        const text=results[key].extract
         const img=results[key].hasOwnProperty('thumbnail')?results[key].thumbnail.source:null;
         const items={
             id:id,
             title:title,
             text:text,
-            img:img
+            img:img,
         }
 
         resultArray.push(items)
